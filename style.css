@@ -1,0 +1,65 @@
+.toggle-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-slider {
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.toggle-slider::before {
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.toggle-input:checked + .toggle-slider {
+    background-color: #2196F3;
+}
+
+.toggle-input:checked + .toggle-slider::before {
+    transform: translateX(26px);
+}
+
+.toggle-icon {
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-left: 5px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.toggle-icon-sun {
+    display: none;
+}
+
+.toggle-input:checked + .toggle-slider .toggle-icon-moon {
+    display: none;
+}
+
+.toggle-input:checked + .toggle-slider .toggle-icon-sun {
+    display: inline-block;
+}
